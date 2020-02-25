@@ -1,0 +1,24 @@
+
+.App{
+    display: grid;
+    grid-template-areas:  "Header"
+                          "Content"
+                          "Footer";
+    @include Row-Col( 60px 1fr 40px, 1fr );
+    height: 100vh;              
+    background-color: $dark-color;
+  }
+  
+  .content{
+    grid-area: Content;
+    @include display(grid, center, center);
+    grid-template-areas:  "Hero" 
+                          "Associate";
+    @include Row-Col( 1fr 300px, 1140px );
+    grid-template-columns: 1140px;
+    @include respond-to(1024px){
+      grid-template-columns: 100%;
+    }
+  }
+  
+  
