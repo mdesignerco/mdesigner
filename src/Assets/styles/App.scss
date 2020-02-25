@@ -1,0 +1,259 @@
+@import './_mixins';
+
+.App{
+  display: grid;
+  grid-template-areas:  "Header"
+                        "Content"
+                        "Footer";
+  @include Row-Col( 60px 1fr 40px, 1fr );
+  height: 100vh;              
+  background-color: $dark-color;
+}
+.App-header{
+  grid-area: Header;
+}
+.content__icon{
+  display: none;
+  @include respond-to(768px){
+    position: absolute;
+    @include display(flex, space-evenly, center);
+    flex-direction: column;
+    width: 35px;
+    height: 35px;
+    padding: 1.5em;
+    bottom: 55px;
+    right: 15px;
+    border: none;
+    border-radius: 25%;
+    background-color: $base-color;
+  }
+  &-menu{
+    background-color: white;
+    width: 25px;
+    height: 5px;
+    margin: 2px 0;
+  }
+}
+
+.nav__menu{
+  background-color: $base-color;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.58em;
+  @include display(flex, center, center);
+  &-container{
+    width: 100%;
+    max-width: 1140px;
+    @include respond-to(900px){
+      max-width: 100%;
+      justify-content: center;
+    }    
+    @include respond-to(1024px){
+      max-width: 100%;
+    }   
+    @include display( flex, space-between, center);
+  }
+  &-img{
+    width: 150px;
+    height: auto;
+  }
+  &-items{
+    list-style: none;
+    font-size: 1em ;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $light-color;
+    width: 100%;
+    max-width: 500px;
+    margin: 0;
+    @include display(flex, space-between, center);
+    @include respond-to(768px){
+      @include display(none, space-between, center);
+      flex-direction: column;
+      position: absolute;
+      bottom: 100px;
+      left: 60px;
+      width: calc( 100% - 120px);
+      height: 200px;
+      font-size: 1.5em;
+      padding: 0.8em 0;
+      border-radius: 2%;
+      background-color: $base-color;
+    }  
+    &.is-active{
+      display: flex;
+      animation: Appear 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    &.is-close{
+      display: flex;
+      transform: translatex(-500px);
+      animation: AppearReverse 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
+  &-item{
+    @include respond-to(768px){
+      text-align: center;
+    }  
+    &:hover{
+      color: $secondary-color;
+      font-weight: 600;
+      @include respond-to(768px){
+        width: 100%;
+        background-color: rgba($light-color,0.5);
+      }
+    }
+  }
+}
+
+@keyframes Appear{
+  from{
+    opacity: 0;
+    transform: translatex(-300px);
+  }
+  to{
+    opacity: 100;
+    transform: translatex(0);
+  }
+}
+
+@keyframes AppearReverse{
+  from{
+    opacity: 100;
+    transform: translatex(0);
+  }
+  to{
+    opacity: 0;
+    transform: translatex(-300px);
+  }
+}
+
+.img-title{
+  width: 100%;
+  max-width: 300px;
+}
+
+.down-title{
+  @include display(flex, end,flex-end);
+}
+.bg-img{
+  background-image: url(../images/banner-media-bone.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+}
+
+.text-3{
+  font-family: "Roboto Mono", roboto;
+  font-size: 1em;
+  color:$light-color;
+  font-weight: 100;
+}
+
+.nav__social{
+  @include display(flex, center, center);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  &-item{
+    padding: 0 4px;
+    margin: 0;
+    @include display(flex, center, center);
+    a{
+      @include display(flex, center, center);
+      font-size: 1.5em;
+      margin: 0;
+      padding: 0;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      color: $base-color;
+      border: 1px solid $base-color;
+      background-color: $secondary-color;
+      &:hover{
+        color: $secondary-color;
+        background-color: $light-color;
+        cursor: pointer;
+      }
+      &:active{
+        color: $secondary-color;
+        background-color: $light-color;
+        cursor: pointer;
+      }
+      span{
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.solid-border{
+  border-top: 1px solid $base-color;
+}
+
+
+.content{
+  grid-area: Content;
+  @include display(grid, center, center);
+  grid-template-areas:  "Hero" 
+                        "Associate";
+  @include Row-Col( 1fr 300px, 1140px );
+  grid-template-columns: 1140px;
+  @include respond-to(1024px){
+    grid-template-columns: 100%;
+  }
+}
+
+.hero{
+  grid-area: Hero;
+  @include display(flex, flex-end,center);
+  flex-direction: column;
+  height: 100%;
+  padding: 2em;
+}
+
+.associate{
+  grid-area: Associate;
+  @include display(flex, space-evenly,center);
+  flex-direction: column;
+  height: 100%;
+}
+
+.menu__associate{
+  list-style: none;
+  width: 100%;
+  @include display(flex, space-evenly,center);
+  margin: 0;
+  padding: 0;
+  &-item{
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  &-img{
+    width: 150px;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.text-2{
+  font-size: 2em;
+  color: $light-color;
+  font-weight: 300;
+}
+
+footer{
+  grid-area: Footer;
+  @include display(flex, center, center);
+  background-color: $base-color;
+  color: $light-color;
+  font-size: 0.8em;
+  padding: 0.8em 0;
+  p{
+    margin: 0;
+    padding: 0;
+  }
+}

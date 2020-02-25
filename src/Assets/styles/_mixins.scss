@@ -1,0 +1,19 @@
+@import'/_Variables';
+
+@mixin display ( $display, $justify-content, $align-items ) {
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin Row-Col ($Rows, $Cols) {
+    grid-template-rows: $Rows;
+    grid-template-columns: $Cols;
+}
+
+
+@mixin respond-to($width){
+  @media only screen and (max-width: $width){
+    @content;
+  }
+}
