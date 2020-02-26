@@ -7,7 +7,7 @@ function Layout(props){
     //const Children = props.children;
     return (
         <React.Fragment>
-            <div className="App">
+            <div className="App ">
                 <Navbar/>
                     {props.children}
                 <Footer/>

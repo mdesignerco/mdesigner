@@ -6,7 +6,7 @@ class Footer extends React.Component {
         return(
             <React.Fragment>
                 <footer>
-                    <p >Copyright © 2019  <Link to="/">mdesigner.co </Link></p>
+                    <p >Copyright © 2019 </p>
                 </footer>
             </React.Fragment>
         )

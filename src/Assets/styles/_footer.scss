@@ -1,18 +1,12 @@
 footer{
     grid-area: Footer;
     @include display(flex, center, center);
-    background-color: $base-color;
+    color: rgba($light-color, 0.5);
     font-size: 0.8em;
     padding: 0.8em 0;
     p{
       margin: 0;
       padding: 0;
     }
-    a{
-      color: $light-color;
-      &:hover{
-        color: $secondary-color;
-        text-decoration: none;
-      }
-    }
+    
   }

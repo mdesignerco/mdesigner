@@ -15,10 +15,9 @@
     grid-template-areas:  "Hero" 
                           "Associate";
     @include Row-Col( 1fr 300px, 1140px );
-    grid-template-columns: 1140px;
     @include respond-to(1024px){
       grid-template-columns: 100%;
     }
-  }
+}
   
   

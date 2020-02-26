@@ -1,7 +1,12 @@
+@import '../../../node_modules/normalize-scss/sass/normalize'; 
 @import './variables';
 @import './mixins';
 @import './global';
+
 @import './navbar';
+
 @import './content';
 @import './home';
+@import './blog';
+
 @import './footer';

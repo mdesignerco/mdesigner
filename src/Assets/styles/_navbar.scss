@@ -25,7 +25,6 @@
   }
   
   .nav__menu{
-    background-color: $base-color;
     max-width: 100%;
     margin: 0;
     padding: 0.58em;
@@ -85,11 +84,10 @@
         }  
         font-size: 1em ;
         font-weight: 300;
-        color: $light-color;
+        color: rgba($light-color,0.7);
       }
       &:hover{
         a{
-          color: $secondary-color;
           font-weight: 600;
           @include respond-to(768px){
             width: 100%;

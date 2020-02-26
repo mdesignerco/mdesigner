@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from  '../Assets/images/Logo_mdesigner_2020_Color.svg';
+import logo from  '../Assets/images/Logo_mdesigner_2020_Oscura.svg';
 
 class Navbar extends React.Component {
   constructor(props){
@@ -35,10 +35,10 @@ class Navbar extends React.Component {
                 <div className="content__icon-menu"></div>
             </button>
             <ul className={`nav__menu-items ${this.className}`}>
-                <li className="nav__menu-item"><Link Link=""> Home 2.0 </Link></li>
-                <li className="nav__menu-item"><Link Link=""> Blog  3. 0</Link></li>
-                <li className="nav__menu-item"><Link Link=""> Más de mi </Link></li>
-                <li className="nav__menu-item"><Link Link=""> Contacto </Link></li>
+                <li className="nav__menu-item"><Link to="/"> Home </Link></li>
+                <li className="nav__menu-item"><Link to="/blog"> Blog </Link></li>
+                <li className="nav__menu-item"><Link to=""> Más de mi </Link></li>
+                <li className="nav__menu-item"><Link to=""> Contacto </Link></li>
             </ul>
             </div>
         </nav>

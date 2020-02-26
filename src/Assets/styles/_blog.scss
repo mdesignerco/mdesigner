@@ -1,0 +1,56 @@
+$width: calc(1140px / 3);
+
+.content__Blog{
+    grid-area: Content;
+    grid-gap: 5px;
+    @include display(grid, center, center);
+    @include Row-Col( 1fr, repeat(3, calc(1140px / 3)) );
+    @include respond-to(1024px){
+      grid-template-columns: 100%;
+    }
+    
+    &-col{
+        border-right: 5px solid $light-color;
+        border-left: 5px solid $light-color;
+        height: 100%;
+        width: 100%;
+    }
+
+    .tecnologia{
+        background-image: url('../images/tech.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .games{
+        background-image: url('../images/stream.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .music{
+        background-image: url('../images/music.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+img{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+
+
+.gradient{
+    background: linear-gradient(0deg, rgba(15,15,14,1) 20%, rgba(15,15,14,0) 100%);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    padding: 1.2em;
+    text-transform: uppercase;
+}
