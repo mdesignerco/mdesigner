@@ -1,0 +1,21 @@
+.content__article{
+    grid-area: Content;
+    @include display(grid, center, center);
+    @include Row-Col(  1fr , 300px 840px );
+    padding: 0 ;
+    &-text{
+        padding: 0;
+        margin: 0;
+        color: rgba($light-color, 0.7);
+    }
+    &-title{
+        font-size: 2.5em;
+        padding-bottom: 0.8em;
+        text-transform: uppercase;
+        color: rgba($light-color, 0.7);
+    }
+    &-col{
+        padding: 0.8em;
+    }
+}
+

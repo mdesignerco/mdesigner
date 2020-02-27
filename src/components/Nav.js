@@ -36,7 +36,7 @@ class Navbar extends React.Component {
             </button>
             <ul className={`nav__menu-items ${this.className}`}>
                 <li className="nav__menu-item"><Link to="/"> Home </Link></li>
-                <li className="nav__menu-item"><Link to="/blog"> Blog </Link></li>
+                <li className="nav__menu-item"><Link to="/category"> Blog </Link></li>
                 <li className="nav__menu-item"><Link to=""> Más de mi </Link></li>
                 <li className="nav__menu-item"><Link to=""> Contacto </Link></li>
             </ul>
