@@ -4,16 +4,16 @@
     grid-gap: 5px;
     @include display(grid, center, center);
     @include Row-Col( 1fr, repeat(3, calc(1140px / 3)) );
-    @include respond-to(1024px){
-        @include Row-Col( repeat(3, calc(1140px / 3)), 1fr  );
-}
+    @include respond-to(768px){
+        @include Row-Col( repeat(3, 1fr), 1fr  );
+    }
     
     &-col{
         border-right: 5px solid $light-color;
         border-left: 5px solid $light-color;
         height: 100%;
         width: 100%;
-        @include respond-to(1024px){
+        @include respond-to(768px){
             border-top: 5px solid $light-color;
             border-bottom: 5px solid $light-color;
             border-right: none;
@@ -61,5 +61,9 @@ img{
     transition: 1s;
     &:hover{
         opacity: 1;
+    }
+    @include respond-to(1024px){
+        opacity: 1;
+        padding-bottom: 0.5em ;
     }
 }

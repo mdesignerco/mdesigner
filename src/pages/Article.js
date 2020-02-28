@@ -1,7 +1,8 @@
 import React from 'react';
 
 import image from '../Assets/images/stream.jpg';
-
+import profile from '../Assets/images/burger.jpg';
+import cover from '../Assets/images/cover.jpg';
 
 class Article extends React.Component {
     render(){
@@ -9,8 +10,19 @@ class Article extends React.Component {
             <React.Fragment>
                 <div className="content__article">
                     <div className="content__article-col">
-                        <h1>Tecnología</h1>
+                        <div className="profile">
+                            <div className="profile__cover">
+                                <div className="profile__cover-img"  style={{background: `url("${cover}") no-repeat top right `}} ></div>
+                                <img src={profile} alt="" className="profile__cover-imgProfile"/>
+                            </div>
+                            <div className="profile__body">
+                                <h3 className="profile__body-title">JmcGraphics</h3>
+                                <span className="profile__body-description">
+                                    Diseñador gráfico y web. Streamer juegos como: PUBG, CS:GO...
+                                </span>
+                            </div>
                         </div>
+                    </div>
                     <div className="content__article-col">
                             <h1 className="content__article-title">Tecnología</h1>
                             <p className="content__article-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae rhoncus elit, id fermentum nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur at ex condimentum, malesuada ipsum tincidunt, vestibulum turpis. Quisque mattis erat lacus, ac tincidunt ex porttitor eget. Quisque sed ullamcorper leo. Maecenas et mattis elit. Suspendisse scelerisque nulla nec sapien pharetra, non pellentesque nibh bibendum.

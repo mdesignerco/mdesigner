@@ -4,7 +4,7 @@
   .content__icon{
     display: none;
     @include respond-to(768px){
-      position: absolute;
+      position: fixed;
       @include display(flex, space-evenly, center);
       flex-direction: column;
       width: 35px;
@@ -15,6 +15,7 @@
       border: none;
       border-radius: 25%;
       background-color: $base-color;
+      z-index: 5;
     }
     &-menu{
       background-color: white;

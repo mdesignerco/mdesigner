@@ -14,7 +14,7 @@ class App extends React.Component {
     render(){
       return (
         <React.Fragment>
-          <section className="content bg-img">
+          <section className="content">
             <div className="hero ">
               <div className=" down-title ">
                   <img className="img-title align-center" src={logo_header} alt="Mdesigner"/>

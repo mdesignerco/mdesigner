@@ -12,9 +12,9 @@ class Blog extends React.Component {
                        <h1>Tecnología</h1>
                     </div>
                    <div className="content__blog-col posts">
-                       <Link to="/article">
+                        <Link to="/article">
                             <Card />
-                       </Link>
+                        </Link>
                    </div>
                </div>
             </React.Fragment>

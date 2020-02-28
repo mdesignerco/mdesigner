@@ -8,9 +8,7 @@ import Blog from '../pages/Blog';
 import Article from '../pages/Article';
 
 class App extends React.Component{
-  constructor(props) {
-    super(props);
-  }
+  
   render(){
     return(
       <BrowserRouter>

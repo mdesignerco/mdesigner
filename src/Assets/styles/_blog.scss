@@ -2,6 +2,10 @@
     grid-area: Content;
     @include display(grid, center, center);
     @include Row-Col(  1fr , 30% 1fr );
+    @include respond-to(768px){
+        flex-direction: column;
+        @include display(flex, center, center);
+    }
     padding: 0 1em;
     h1{
         font-size: 3em;
@@ -12,8 +16,12 @@
 }
 
 .posts{
+    grid-gap: 5px;
     @include display(grid, center, center);
     @include Row-Col(  1fr 1fr, 1fr 1fr 1fr 1fr  );  
-    grid-gap: 5px;
+    @include respond-to(1024px){
+        flex-direction: column;
+        @include display(flex, center, center);
+    }
 }
 
